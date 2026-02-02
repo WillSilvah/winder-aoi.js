@@ -21,14 +21,14 @@ $timezone[America/Recife]
 	name: "light_logo",
 	type: "awaited",
 	code: `
-$ifAwaited[$day==Monday;{execute:orange_light_logo};$ifAwaited[$day==Wednesday;{execute:pink_light_logo};{execute:orange_light_logo}]]
+$ifAwaited[$day==Sunday;{execute:orange_light_logo};$ifAwaited[$day==Wednesday;{execute:pink_light_logo};{execute:orange_light_logo}]]
 
 	`
 },{
 	name: "dark_logo",
 	type: "awaited",
 	code: `
-$ifAwaited[$day==Monday;
+$ifAwaited[$day==Sunday;
 {execute:orange_dark_logo};$ifAwaited[$day==Wednesday;
 {execute:pink_dark_logo};
 {execute:red_dark_logo}
