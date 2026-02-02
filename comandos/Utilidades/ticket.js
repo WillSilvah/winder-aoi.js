@@ -164,4 +164,21 @@ $interactionReply[<@$authorID> | deletando...;everyone;false]
 
 $modifyChannelPerms[$channelID;$guildID;-sendmessages]
 `
+},{
+name: "$alwaysExecute",
+code: `
+$ifAwaited[$isTicket[$channelID]==true;{execute:log-ticket-on}]
+`
+},{
+name: "log-ticket-on",
+type: "awaited",
+code: `
+$appendFile[Recursos/ticket-logs/$channelName[$channelID].txt;
+[$hour:$minute:$second] $userTag ($authorID): $message
+
+MSGID: $messageID;utf8]
+$timezone[America/Recife]
+
+$onlyIf[$fileExists[Recursos/ticket-logs/$channelName[$channelID].txt]==true;]
+`
 }]
