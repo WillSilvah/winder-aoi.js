@@ -38,7 +38,7 @@ $onlyIf[$stringStartsWith[$message;+;=;w!+w+;/;m!]==false;]
 $onlyIf[1462224054676099094==$guildID;]
 $onlyIf[$hasRoles[$guildID;$authorID;$getVar[memberVerifiedRole]]==true;]
 
-$cooldown[1m;]
+$cooldown[30s;]
 `
 },{
 //ESPECIAL
