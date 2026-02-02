@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - canary
+      - controller
 
 jobs:
   deploy:
@@ -30,3 +31,12 @@ jobs:
           git pull origin canary
           npm install
           pm2 restart winder-canary
+
+      # DEPLOY PARA O WINDER CONTROLLER
+      - name: Deploy Controller
+        if: github.ref == 'refs/heads/controller'
+        run: |
+          cd /home/frufru/services/winder-controller
+          git pull origin controller
+          npm install
+          pm2 restart winder-controller
