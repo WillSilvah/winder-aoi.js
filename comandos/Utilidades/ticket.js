@@ -158,7 +158,7 @@ $appendFile[Recursos/ticket-logs/$channelName[$channelID].txt;
 ;utf8]
 
 $timeZone[America/Recife]
-$useChannel[1465218335389257802]
+$useChannel[1467920266041757922]
 
 $interactionReply[<@$authorID> | deletando...;everyone;false]
 
