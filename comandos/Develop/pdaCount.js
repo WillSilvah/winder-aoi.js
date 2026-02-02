@@ -27,7 +27,7 @@ $let[bonusVotePDA;$if[$hasRoles[$guildID;$authorID;$getVar[memberVotedRole]]==tr
 
 $let[basicPDA;$if[$get[textDivisorPDA]>=15;15;$get[textDivisorPDA]]]
 
-$let[textDivisorPDA;$truncate[$math[$charCount[$message]/3]]]
+$let[textDivisorPDA;$truncate[$math[$charCount[$message]/4]]]
 
 $onlyIf[$argsCount[$message]>=3;]
 $onlyIf[$checkContains[$message;lorem;gboard]==false;]
