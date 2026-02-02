@@ -6,7 +6,7 @@ on:
       - main
       - canary
       - controller
-   schedule:
+  schedule:
     # Rodar todos os dias às 03:00 (Horário de Brasília aproximadamente)
     - cron: '30 6 * * *' 
 
