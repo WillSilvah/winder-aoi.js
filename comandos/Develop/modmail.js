@@ -24,7 +24,7 @@ $description[1;
 $slashOption[mensagem]
 ]
 $footer[1;Você pode responder clicando no botão "responder" ou falar diretamente com a equipe clicando em "Criar Ticket"]
-$color[1;$dyColor[orange;light]]
+$color[1;Orange]
 
 
 $addbutton[1;Criar um ticket;primary;ticket;$ifAwaited[$slashOption[ticket]==true;true;false];📧]
@@ -53,15 +53,14 @@ name: "reply-modmail-1",
 type: "interaction",
 prototype: "modal", 
 code: `
-
 <@&$getGuildVar[AllStaffRole;$guildID]>
-$author[1;$userTag respondeu o modmail.;https://cdn.discordapp.com/emojis/1181219955417567343.png?size=2048]
+$title[1;@$userTag respondeu o modmail.]
 $description[1;
 $textInputValue[replyModmail]
 ]
 $footer[1;ID do usuário: $authorID]
 $thumbnail[1;$userAvatar]
-$color[1;$dyColor[orange;light]]
+$color[1;Orange]
 
 $useChannel[1185351021791289374]
 
