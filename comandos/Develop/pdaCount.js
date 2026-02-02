@@ -29,7 +29,7 @@ $let[basicPDA;$if[$get[textDivisorPDA]>=15;15;$get[textDivisorPDA]]]
 
 $let[textDivisorPDA;$truncate[$math[$charCount[$message]/3]]]
 
-$onlyIf[$argsCheck[$message]>=3;]
+$onlyIf[$argsCount[$message]>=3;]
 $onlyIf[$checkContains[$message;lorem;gboard]==false;]
 $onlyIf[$getGuildVar[pickStatus;$guildID]==false;]
 $onlyIf[$checkContains[$channelID;1462546608758718515]==false;]
