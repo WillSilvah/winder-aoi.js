@@ -73,7 +73,7 @@ Fecha este ticket.
 {footer:Estaremos sempre aqui para ajudar você!}
 {thumbnail:$userAvatar}
 {color:Orange}
-};1463237935636939020;true;]]
+};1467920537169826048;true;]]
 
 $timezone[America/Recife]
 
@@ -145,7 +145,7 @@ prototype: "button",
 code: `
 $deleteFile[Recursos/ticket-logs/$channelName[$channelID].txt]
 
-$closeTicket[<@$authorID> | O canal <#$channelID> não é um ticket, crie um ticket utilizando pw!criarticket]
+$closeTicket[<@$authorID> | O canal <#$channelID> não é um ticket, crie um ticket utilizando $getGuildVar[prefixo]criarticket]
 
 $wait[5s]
 $author[1;$channelName[$channelID]]
