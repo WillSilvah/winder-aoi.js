@@ -21,7 +21,7 @@ $timezone[America/Recife]
 	name: "light_logo",
 	type: "awaited",
 	code: `
-$ifAwaited[$day==Sunday;{execute:orange_light_logo};$ifAwaited[$day==Wednesday;{execute:pink_light_logo};{execute:orange_light_logo}]]
+$ifAwaited[$day==Sunday;{execute:orange_light_logo};$ifAwaited[$day==Wednesday;{execute:pink_light_logo};{execute:red_light_logo}]]
 
 	`
 },{
