@@ -18,12 +18,12 @@
 },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WillSilvah/winder-oldgen.git"
+    "url": "git+https://github.com/WillSilvah/Winder.git"
   },
   "author": "willsilvah",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/WillSilvah/winder-oldgen/issues"
+    "url": "https://github.com/WillSilvah/Winder/issues"
   },
-  "homepage": "https://github.com/WillSilvah/winder-oldgen#readme"
+  "homepage": "https://github.com/WillSilvah/Winder#readme"
 }
