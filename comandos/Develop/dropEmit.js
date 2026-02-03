@@ -30,7 +30,7 @@ $suppressErrors
 
 $useChannel[$getGuildVar[batePapo]]
 
-$setGuildVar[pickEmit;true;$guildID
+$setGuildVar[pickEmit;true;$guildID]
 $onlyPerms[administrator;<@$authorID> Você precisa ter a permissão de administrador para usar este comando.]
 `
 }] 
