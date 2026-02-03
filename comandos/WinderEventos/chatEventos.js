@@ -24,7 +24,7 @@ $wait[1m]
 $setGuildVar[pickXPmin;5;$guildID]
 $setGuildVar[pickXPmax;15;$guildID]
 
-$ifAwaited[$getGuildVar[msgPerMinute;$guildID]>=6;
+$ifAwaited[$getGuildVar[msgPerMinute;$guildID]>=4;
 {execute:drop-$random[2;4]}]
 
 $onlyIf[$getGuildVar[pickEmit;$guildID]==false;]
@@ -32,7 +32,7 @@ $onlyIf[$getGuildVar[pickEmit;$guildID]==false;]
 `
 },{
 //$random[1000000;9999999]
-//name: "drop-1", desativado
+name: "drop-1",
 type: "awaited",
 code: `
 $setGuildVar[pickType;1;$guildID]
