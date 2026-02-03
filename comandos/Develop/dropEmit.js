@@ -20,8 +20,8 @@ $clientTyping
 $onlyIf[$getGuildVar[pickStatus]==true;]
 
 $wait[1m]
-$setGuildVar[pickXPmin;20]
-$setGuildVar[pickXPmax;30]
+$setGuildVar[pickXPmin;5]
+$setGuildVar[pickXPmax;15]
 
 $ifAwaited[1==1;{execute:drop-$ifAwaited[$message[1]==;$random[1;4];$message[1]]}]
 
