@@ -2,8 +2,8 @@ module.exports = [{
 name: "autoRankDaily",
 type: "loop",
 channel: "$getVar[consoleChat]",
-executeOnStartup: "true",
-every: 999,
+executeOnStartup: "false",
+every: 10800000 ,
 code: `
 $channelSendMessage[$getGuildVar[batePapo];Acabei de postar uma atualização lá no <#1466734269572579399>, você está no rank?]
 
@@ -15,15 +15,12 @@ $userLeaderBoard[1462224054676099094;msgXP;desc;{top}° **<@{id}>** -> ✨️{va
 
 $userLeaderBoard[1462224054676099094;messageMonth;desc;{top}° **<@{id}>** -> 💬️{value};11;1]
 }
-{footer:Atualizado sempre às 22h | w!rank}
+{footer:Atualizado sempre a cada 3 horas. | $getGuildVar[prefixo]rank}
 {color:Green}
 }]
 
 $createObject[session;$readFile[Recursos/session.json]]
 
 $clear[$getGuildVar[rankedChat;1462224054676099094];6]
-
-$onlyIf[$hour:$minute:$second==22:00:00;]
-$timezone[America/Recife]
 `
 }]
