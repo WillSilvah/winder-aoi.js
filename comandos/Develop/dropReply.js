@@ -4,6 +4,7 @@ code: `
 $setGuildVar[pickEmit;false;$guildID]
 $awaitExecute[give-role-event]
 
+$setGuildVar[pickLastUser;$authorID;$guildID]
 $setUserVar[pickCount;$sum[$getUserVar[pickCount;$authorID;$guildID];1];$authorID;$guildID]
 $slowmode[0s;$getGuildVar[batePapo]]
 $sendMessage[<@$authorID> | Parabéns, você ganhou ✨**+$get[xpDrop] PDA**!]
