@@ -1,7 +1,7 @@
 module.exports = [{
 name: "resetMsgs",
 type: "loop",
-channel: "1468237433337544877",
+channel: "1468252568991043666",
 executeOnStartup: "true",
 every: 60000,
 code: `
@@ -15,3 +15,4 @@ $sendMessage[{newEmbed:
 `
 
 }]
+
