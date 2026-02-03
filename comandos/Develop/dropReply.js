@@ -26,9 +26,9 @@ name: "give-role-event",
 type: "awaited",
 code: `
 $setGuildVar[pickLastUser;$authorID;$guildID]
-$wait[5s]
+$wait[1s]
 $removeRole[$guildID;$getGuildVar[pickLastUser;$guildID];$getGuildVar[lastWinMemberRole];Não é mais último vencedor do evento de chat]
-$wait[5s]
+$wait[1s]
 $giveRole[$guildID;$authorID;$getGuildVar[lastWinMemberRole];Se tornou o último vencedor do evento de chat]
 `
 }]
