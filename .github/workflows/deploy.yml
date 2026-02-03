@@ -7,8 +7,8 @@ on:
       - canary
       - controller
   schedule:
-    # Rodar todos os dias às 03:00 (Horário de Brasília aproximadamente)
-    - cron: '30 6 * * *' 
+    # Rodar todos os dias às 06:30 UTC (Aprox. 03:30 da manhã em Pernambuco)
+    - cron: '30 6 * * *'
 
 jobs:
   deploy:
@@ -22,26 +22,28 @@ jobs:
         if: github.ref == 'refs/heads/main'
         run: |
           cd /home/frufru/services/winder
-          git pull origin main
+          git fetch origin main
+          git reset --hard origin/main
           npm install
           pm2 restart winder-bot
 
       # DEPLOY PARA O WINDER CANARY
       - name: Deploy Canary
         if: github.ref == 'refs/heads/canary' || github.event_name == 'schedule'
-      run: |
-        cd /home/frufru/services/winder-canary
-        git fetch origin canary
-        git reset --hard origin/canary
-        npm install aoijs@github:aoijs/aoi.js aoi.music@github:aoijs/aoi.music
-        npm install
-        pm2 restart winder-canary
+        run: |
+          cd /home/frufru/services/winder-canary
+          git fetch origin canary
+          git reset --hard origin/canary
+          npm install aoijs@github:aoijs/aoi.js aoi.music@github:aoijs/aoi.music
+          npm install
+          pm2 restart winder-canary
 
       # DEPLOY PARA O WINDER CONTROLLER
       - name: Deploy Controller
         if: github.ref == 'refs/heads/controller'
         run: |
           cd /home/frufru/services/winder-controller
-          git pull origin controller
+          git fetch origin controller
+          git reset --hard origin/controller
           npm install
-          pm2 restart winder-controller
+          pm2 restart winder-controller || pm2 start index.js --name winder-controller
