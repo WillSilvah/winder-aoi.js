@@ -29,12 +29,13 @@ jobs:
       # DEPLOY PARA O WINDER CANARY
       - name: Deploy Canary
         if: github.ref == 'refs/heads/canary' || github.event_name == 'schedule'
-        run: |
-          cd /home/frufru/services/winder-canary
-          git pull origin canary
-          npm install aoijs@github:aoijs/aoi.js aoi.music@github:aoijs/aoi.music
-          npm install
-          pm2 restart winder-canary
+      run: |
+        cd /home/frufru/services/winder-canary
+        git fetch origin canary
+        git reset --hard origin/canary
+        npm install aoijs@github:aoijs/aoi.js aoi.music@github:aoijs/aoi.music
+        npm install
+        pm2 restart winder-canary
 
       # DEPLOY PARA O WINDER CONTROLLER
       - name: Deploy Controller
