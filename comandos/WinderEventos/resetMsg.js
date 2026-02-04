@@ -1,18 +1,11 @@
 module.exports = [{
 name: "resetMsgs",
 type: "loop",
-channel: "1468252568991043666",
+channel: "1465218335389257802",
 executeOnStartup: "true",
-every: 60000,
+every: 65000,
 code: `
-$resetGuildVar[msgPerMinute]
-$wait[1s]
+$setGuildVar[msgPerMinute;0;$guildID]
 
-$sendMessage[{newEmbed:
-{author:$getGuildVar[msgPerMinute;1462224054676099094] mensagens por minuto}
-{color:Random}
-}]
 `
-
 }]
-
