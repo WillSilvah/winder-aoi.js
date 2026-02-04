@@ -100,7 +100,7 @@ $onlyIf[$getGuildVar[guildIconDefault;1462224054676099094]==true;]
 	`
 },{
 	name: "pink_dark_logo",
-	type: "type",
+	type: "awaited",
 	code: `
 $setGuildIcon[$get[logo];1462224054676099094]
 
