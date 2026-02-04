@@ -46,7 +46,7 @@ $modifyChannelPerms[$get[id];$authorID;+viewchannel;+sendmessages;+embedlinks;+a
 $modifyChannelPerms[$get[id];$guildID;-viewchannel]
 
 
-$interactionReply[<@$authorID> | Ticket feito! Para fechar ele depois use o comando w!fecharticket
+$interactionReply[<@$authorID> | Ticket feito! Para fechar ele depois use o comando $getGuildVar[prefixo]fecharticket
 > <#$get[id]>
 ;everyone;true]
 
