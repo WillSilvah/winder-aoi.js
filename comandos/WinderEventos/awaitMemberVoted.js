@@ -3,15 +3,7 @@ name: "votedDiscords",
 type: "memberUpdate",
 channel: "$getGuildVar[batePapo]",
 code: `
-$ifAwaited[$getUserVar[votesMonth;$authorID]==100;
-{execute:100votes}
-]
-$ifAwaited[$getUserVar[votesMonth;$authorID]==60;
-{execute:60votes}
-]
-$ifAwaited[$getUserVar[votesMonth;$authorID]==30;
-{execute:30votes}
-]
+
 
 $sendDm[{newEmbed:
 {title:Muito obrigado por ter votado!}
@@ -50,11 +42,6 @@ $let[xp;$random[1;5]]
 $onlyIf[$newMember[addedRoles]==$roleName[$getVar[memberVotedRole]];]
 `
 },{
-name: "countSystem",
-type: "awaited",
-code: `
-`
-},{
 name: "remindVote",
 type: "memberUpdate",
 code: `
@@ -68,7 +55,7 @@ Vamos ter esta sensação novamente? <:pats_foxThinking:1463245311563661477> Eu 
 Vamos lá
 https://discords.com/servers/$guildID/upvote
 }
-{footer:Não quer ser lembrado de votar? use w!lembrarvoto}
+{footer:Não quer ser lembrado de votar? use $getGuildVar[prefixo]lembrarvoto}
 {color:Green}
 
 };$authorID]
@@ -76,69 +63,5 @@ https://discords.com/servers/$guildID/upvote
 $onlyIf[$getUserVar[reminderStatus;$authorID]==true;]
 
 $onlyIf[$newMember[removedRoles]==$roleName[$getVar[memberVotedRole]];]
-`
-},{
-name: "firstVote",
-type: "awaited",
-code: `
-<@$authorID>
-## PRIMEIRO VOTO
-**Vote na Patinhas pela primeira vez!**
-Muito obrigado por ajudar a Patinhas a crescer votando nela! Agradeço bastante por isso, continue votando nela para ganhar prêmios e conquistas! 
-
-$wait[2s]
-$clientTyping
-`
-},{
-name: "30votes",
-type: "awaited",
-code: `
-<@$authorID>
-## 30 VOTOS!
-**Vote na Patinhas 30 vezes neste mês!**
-Fico muito feliz em saber que você está empenhado no objetivo de ajudar a patinhas em ser mais conhecida nesse mundo! 
-> **Ganhou +$get[xp] pontos!**
-
-$setUserVar[msgXP;$sum[$getUserVar[msgXP;$authorID];$get[xp]];$authorID]
-$setUserVar[msgXPtotal;$sum[$getUserVar[msgXPtotal;$authorID];$get[xp]];$authorID]
-
-$let[xp;150]
-$wait[2s]
-$clientTyping
-`
-},{
-name: "60votes",
-type: "awaited",
-code: `
-<@$authorID>
-## VOTOU SESSENTA VEZES!
-**Vote na Patinhas 60 vezes neste mês!**
-Ai que alegria **$username**, você votou 60 vezes na Patinhas, isso é tão incrível<3
-Obrigado demais pela sua ajuda, vamos criar uma comunidade melhor juntos?
-> **Ganhou +$get[xp] pontos!**
-
-$setUserVar[msgXP;$sum[$getUserVar[msgXP;$authorID];$get[xp]];$authorID]
-$setUserVar[msgXPtotal;$sum[$getUserVar[msgXPtotal;$authorID];$get[xp]];$authorID]
-
-$let[xp;250]
-$wait[2s]
-$clientTyping
-`
-},{
-name: "100votes",
-type: "awaited",
-code: `
-<@$authorID>
-## VOTOU CEM VEZES!
-**Vote na Patinhas 100 vezes neste mês!**
-Que empenho $username[$authorID]! você conseguiu (quase) bater o máximo de votos que pode se conseguir no mês no Discords.com, toda a <@$getVar[allStaffRole]> lhe agradece com isso. 
-> **Ganhou +$get[xp] pontos!**
-
-$setUserVar[msgXP;$sum[$getUserVar[msgXP;$authorID];$get[xp]];$authorID]
-$setUserVar[msgXPtotal;$sum[$getUserVar[msgXPtotal;$authorID];$get[xp]];$authorID]
-
-$let[xp;350]
-$wait[2s]
-$clientTyping
 `
 }]
