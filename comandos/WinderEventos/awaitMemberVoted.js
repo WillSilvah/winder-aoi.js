@@ -34,6 +34,7 @@ Vote você tambêm!
 {thumbnail:$userAvatar}
 {color:Green}
 }
+{deleteIn:5m}
 ]
 
 $setUserVar[votesMonth;$sum[$getUserVar[votesMonth;$authorID];1];$authorID]
