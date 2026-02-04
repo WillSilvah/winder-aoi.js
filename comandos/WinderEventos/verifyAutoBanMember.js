@@ -8,7 +8,7 @@ $awaitExecute[autoBan]
 $let[user_id;$getObjectProperty[infoBan;userID]]
 $let[motivo;$getObjectProperty[infoBan;motivo]]
 $createObject[infoBan;$readFile[Recursos/autoBanimentos/$authorID.json]]
-$onlyIf[$fileExists[Recursos/autoBanimentos/$authorID.json]==true;Nãota banidoKKKKKKK]
+$onlyIf[$fileExists[Recursos/autoBanimentos/$authorID.json]==true;]
 `
 },{
 	name: "updateMemberAutoBan",
