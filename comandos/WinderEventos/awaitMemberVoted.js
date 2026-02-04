@@ -4,7 +4,6 @@ type: "memberUpdate",
 channel: "$getGuildVar[batePapo]",
 code: `
 
-
 $sendDm[{newEmbed:
 {title:Muito obrigado por ter votado!}
 {description:
@@ -17,14 +16,15 @@ Você ganhou **$get[xp]** pontos de atividades e neste mês você já votou **$g
 
 
 $sendMessage[{newEmbed:
-{author:Obrigado @$username por ter votado na Patinhas!:https://cdn.discordapp.com/emojis/1464435933729263657.png?size=2048}
+{author:@$username votou!:$userAvatar}
 {description:
-<@$authorID> votou na Patinhas no [**Discords**](https://discords.com/servers/$guildID/upvote) e agora tem **Bônus de Pontos de Atividade** e ganhou **$get[xp] PDA**!
-Vote você tambêm!
+O **Bônus de Pontos de Atividade** foi ativado e ganhou **$get[xp] PDA**!
 }
-{footer:@$username já votou $getUserVar[votesMonth;$authorID;$guildID] vezes neste mês, $getUserVar[votesTotal;$authorID;$guildID] vezes ao todo!}
-{thumbnail:$userAvatar}
+{footer:$getUserVar[votesMonth;$authorID;$guildID] Votos neste mês | $getUserVar[votesTotal;$authorID;$guildID] no total.}
 {color:Green}
+}
+{actionRow:
+{button:Vote na Patinhas! (Discords.com):link:https://discords.com/servers/$guildID/upvote:false:}
 }
 {deleteIn:5m}
 ]
