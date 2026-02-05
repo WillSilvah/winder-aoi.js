@@ -58,5 +58,5 @@ client.functionManager.createFunction({
 client.functionManager.createFunction({
     name: "$linuxRam", 
     type: "aoi.js",
-    code: `$exec[ps -o rss= -p $(pgrep -f "winder-bot") | awk '{sum+=$1} END {print int(sum/1024)}']`
+    code: `$exec[ps -o rss= -p $(pgrep -f "winder-bot") | awk '{sum+=$1} END {printf int(sum/1024)}']`
 });
