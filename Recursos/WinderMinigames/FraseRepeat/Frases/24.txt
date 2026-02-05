@@ -1,0 +1,4 @@
+{
+	"texto": "Mesmo que não ganhemos, o importante é a jornada que percorremos juntos.",
+	"autor": "Ash Ketchum - Pokémon"
+}

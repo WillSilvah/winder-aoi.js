@@ -1,0 +1,4 @@
+{
+	"texto": "Digo o mesmo, mas com a diferença de que eu não disse nada.",
+	"autor": "Seu Madruga - Chaves"
+}

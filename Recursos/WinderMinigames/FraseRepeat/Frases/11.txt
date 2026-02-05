@@ -1,0 +1,4 @@
+{
+	"texto": "O amor não vê espécies, apenas almas que se pertencem.",
+	"autor": "TwoKinds - Tom Moore"
+}

@@ -19,7 +19,7 @@ $username[$clientID] está ligado! >w<
 ]
 
 $updateVersion
-$setStatus[;;online]
+$setStatus[$username[$clientID] está ligado! >w<;custom;idle]
 $setUserNickname[$clientID;;]
 `
 }]

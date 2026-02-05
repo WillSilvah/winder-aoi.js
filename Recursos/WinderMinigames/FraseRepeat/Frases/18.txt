@@ -1,0 +1,4 @@
+{
+	"texto": "O universo é vasto e frio, mas aqui, com você, eu me sinto aquecido.",
+	"autor": "Amicus - Adastra"
+}

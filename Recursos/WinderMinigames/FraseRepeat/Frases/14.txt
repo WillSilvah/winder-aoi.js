@@ -1,0 +1,4 @@
+{
+	"texto": "A verdadeira nudez não é tirar a roupa, mas deixar que vejam quem você é por dentro.",
+	"autor": "Desconhecido"
+}

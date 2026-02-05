@@ -1,0 +1,4 @@
+{
+	"texto": "Nas sombras da floresta, todo segredo tem uma cauda.",
+	"autor": "The Angel in the Forest"
+}

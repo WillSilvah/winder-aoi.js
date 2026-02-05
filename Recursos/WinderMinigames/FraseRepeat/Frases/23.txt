@@ -1,0 +1,4 @@
+{
+	"texto": "Temos muito em comum. O mesmo sol, a mesma lua, o mesmo ar. Talvez se começássemos a olhar para o que temos em comum, em vez do que é diferente...",
+	"autor": "Meowth - Pokémon"
+}

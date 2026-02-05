@@ -1,0 +1,4 @@
+{
+	"texto": "O amor próprio é o único relacionamento que dura a vida inteira.",
+	"autor": "Washimi - Aggretsuko"
+}

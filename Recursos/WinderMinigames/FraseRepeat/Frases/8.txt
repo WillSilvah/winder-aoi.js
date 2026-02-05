@@ -1,0 +1,4 @@
+{
+	"texto": "Eu sou um lobo, mas meu coração insiste em ser humano.",
+	"autor": "Legoshi - Beastars"
+}

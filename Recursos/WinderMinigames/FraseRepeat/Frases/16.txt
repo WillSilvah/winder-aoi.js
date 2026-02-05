@@ -1,0 +1,4 @@
+{
+	"texto": "O amor entre espécies diferentes é a maior rebeldia contra o sistema.",
+	"autor": "Neferu - Adastra"
+}

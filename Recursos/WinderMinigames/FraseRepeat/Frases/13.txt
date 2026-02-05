@@ -1,0 +1,4 @@
+{
+	"texto": "A vida de um animal de estimação é muito mais complexa do que os humanos pensam.",
+	"autor": "Housepets! - Rick Griffin"
+}

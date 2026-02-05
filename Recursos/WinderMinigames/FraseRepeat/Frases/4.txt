@@ -1,0 +1,4 @@
+{
+	"texto": "Tudo é ousado para quem a nada se atreve.",
+	"autor": "Fernando Pessoa"
+}

@@ -94,16 +94,17 @@ $setGuildVar[pickType;1;$guildID]
 $setGuildVar[pickStatus;true;$guildID]
 $author[1;QUEM ESCREVER PRIMEIRO GANHA!;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
 $description[1;
-### $replaceText[$getObjectProperty[word;palavra]; ; ]
+### $replaceText[$getObjectProperty[frase;texto]; ; ]
 
 ]
 $footer[1;Responda primeiro, rápido!]
 $color[1;Green]
 
-$setGuildVar[pickWord;$getObjectProperty[word;palavra];$guildID]
-$createObject[word;{
-"palavra": "$randomText[O essencial é invisível aos olhos.;Seja você a mudança que deseja ver no mundo.;Não se pode escolher se você vai se ferir neste mundo.;Tudo é ousado para quem a nada se atreve.;As pessoas boas devem amar seus inimigos.;Digo o mesmo, mas com a diferença de que eu não disse nada.;Nas sombras da floresta, todo segredo tem uma cauda.;Eu sou um lobo, mas meu coração insiste em ser humano.;Eu não sou um monstro, só estou tentando sobreviver aos meus sentimentos.;Nesse mundo, ou você é o predador, ou você é a presa.;O amor não vê espécies, apenas almas que se pertencem.;O medo sempre foi a ferramenta mais eficaz para dividir as pessoas.;A vida de um animal de estimação é muito mais complexa do que os humanos pensam.;A verdadeira nudez não é tirar a roupa, mas deixar que vejam quem você é por dentro.;A liberdade começa quando paramos de pedir desculpas pelo que sentimos.;O amor entre espécies diferentes é a maior rebeldia contra o sistema.;Eu prometo, pelas estrelas acima de nós, que eu nunca vou te deixar.;O universo é vasto e frio, mas aqui, com você, eu me sinto aquecido.;O amor próprio é o único relacionamento que dura a vida inteira.]"
-}]
+$setGuildVar[pickWord;$getObjectProperty[frase;texto];$guildID]
+
+$createObject[frase;$readFile[Recursos/WinderMinigames/FraseRepeat/Frases/$get[frase_id].txt]]
+
+$let[frase_id;$random[1;$readFile[Recursos/WinderMinigames/FraseRepeat/quantity.txt]]]
 
 $useChannel[$getGuildVar[batePapo]]
 
@@ -132,9 +133,8 @@ $setGuildVar[pickWord;$getObjectProperty[ask;correct];$guildID]
 $useChannel[$getGuildVar[batePapo]]
 
 $createObject[alt;$getObjectProperty[ask;alts]]
-$createObject[ask;$readFile[Recursos/windord/asks/$get[id].txt]]
+$createObject[ask;$readFile[Recursos/WinderMinigames/windord/asks/$get[id].txt]]
 
-$let[id;$readFile[Recursos/windord/quantity.txt]]
+$let[id;$readFile[Recursos/WinderMinigames/windord/quantity.txt]]
 `
 }]
-

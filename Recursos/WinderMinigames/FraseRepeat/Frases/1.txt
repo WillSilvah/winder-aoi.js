@@ -1,0 +1,4 @@
+{
+	"texto": "O essencial é invisível aos olhos.",
+	"autor": "Antoine de Saint-Exupéry"
+}

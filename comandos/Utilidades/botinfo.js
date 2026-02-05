@@ -18,6 +18,7 @@ $addField[1;🛜 $username[$clientID] ping;**$pingms**]
 $addField[1;⭐ Versão do $username[$clientID];**$getVersion**]
 
 ]
+$footer[1;Tempo ligado: $uptime[humanize]]
 $color[1;Blue]
 `
 }]

@@ -1,0 +1,4 @@
+{
+	"texto": "Às vezes, a única forma de lidar com o mundo é rir enquanto ele quebra.",
+	"autor": "Ragatha - O Incrível Circo Digital"
+}

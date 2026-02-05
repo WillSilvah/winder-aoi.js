@@ -1,0 +1,4 @@
+{
+	"texto": "O medo sempre foi a ferramenta mais eficaz para dividir as pessoas.",
+	"autor": "Zootopia - Disney"
+}

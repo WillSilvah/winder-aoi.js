@@ -1,0 +1,4 @@
+{
+	"texto": "A amizade é a única coisa que cresce quando é compartilhada.",
+	"autor": "Bambi - Disney"
+}

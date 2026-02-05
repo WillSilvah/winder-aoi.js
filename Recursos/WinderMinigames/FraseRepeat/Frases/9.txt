@@ -1,0 +1,4 @@
+{
+	"texto": "Eu não sou um monstro, só estou tentando sobreviver aos meus sentimentos.",
+	"autor": "Legoshi - Beastars"
+}

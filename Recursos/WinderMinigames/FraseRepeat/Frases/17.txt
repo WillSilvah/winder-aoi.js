@@ -1,0 +1,4 @@
+{
+	"texto": "Eu prometo, pelas estrelas acima de nós, que eu nunca vou te deixar.",
+	"autor": "Amicus - Adastra"
+}

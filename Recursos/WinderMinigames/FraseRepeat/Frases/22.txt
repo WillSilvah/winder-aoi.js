@@ -1,0 +1,4 @@
+{
+	"texto": "Eu vejo agora que as circunstâncias do nascimento de alguém são irrelevantes. É o que você faz com o dom da vida que determina quem você é.",
+	"autor": "Mewtwo - Pokémon"
+}

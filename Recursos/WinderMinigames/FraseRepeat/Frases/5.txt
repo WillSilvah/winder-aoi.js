@@ -1,0 +1,4 @@
+{
+	"texto": "As pessoas boas devem amar seus inimigos.",
+	"autor": "Seu Madruga - Chaves"
+}

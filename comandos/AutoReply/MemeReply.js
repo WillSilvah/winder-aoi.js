@@ -5,7 +5,7 @@ $ifAwaited[$stringStartsWith[$toLowerCase[$message];creeper]==true;
 {execute:replyCreeper}
 ]
 
-$ifAwaited[$checkContains[$toLowerCase[$message];olavo;funera;sepult;mort;morr;esquelet;skelet;☠️;💀]==true;
+$ifAwaited[$checkContains[$toLowerCase[$message];olavo;funera;sepult;morto;morreu;esquelet;skelet;☠️;💀]==true;
 {execute:replySkull}
 ]
 

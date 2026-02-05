@@ -1,0 +1,4 @@
+{
+	"texto": "Seja você a mudança que deseja ver no mundo.",
+	"autor": "Mahatma Gandhi"
+}
