@@ -5,7 +5,6 @@ desc: "Bane automaticamente um usuário permanentemente",
 category: "Moderação",
 usage: "winder ban userID motivo?",
 code: `
-$ifAwaited[1==1;{execute:punishment-log}] 
 
 $sendMessage[<@$authorID> **$username[$get[userID]]** foi **$get[puniType]**!]
 
@@ -38,8 +37,6 @@ $onlyIf[$hasRoles[1462224054676099094;$authorID;1462547405466636384]==true;<@$au
 	usage: "winder unban userID motivo?",
 	code: `
 $sendMessage[<@$authorID> **$username[$get[userID]]** foi **$get[puniType]**!]
-
-$ifAwaited[1==1;{execute:punishment-log}]
 	
 $deleteFile[Recursos/autoBanimentos/$get[userID].json]
 
