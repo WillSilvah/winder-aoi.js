@@ -97,7 +97,7 @@ $description[1;
 ### $replaceText[$getObjectProperty[frase;texto]; ; ]
 
 ]
-$footer[1;Responda primeiro, rápido!]
+$footer[1;$getObjectProperty[frase;autor]]
 $color[1;Green]
 
 $setGuildVar[pickWord;$getObjectProperty[frase;texto];$guildID]
