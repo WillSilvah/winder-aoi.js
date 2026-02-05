@@ -28,9 +28,9 @@ O **Bônus de Pontos de Atividade** foi ativado e ganhou **$get[xp] PDA**!
 }
 ]
 
-$setUserVar[votesMonth;$sum[$getUserVar[votesMonth;$authorID;$guildID];1];$authorID;$guildID]
+$setUserVar[votesMonth;$math[$getUserVar[votesMonth;$authorID;$guildID]+1];$authorID;$guildID]
 
-$setUserVar[votesTotal;$sum[$getUserVar[votesTotal;$authorID;$guildID];1];$authorID]
+$setUserVar[votesTotal;$math[$getUserVar[votesTotal;$authorID;$guildID]+1];$authorID;$guildID]
 
 $setUserVar[msgXP;$sum[$getUserVar[msgXP;$authorID;$guildID];$get[xp]];$authorID;$guildID]
 $setUserVar[msgXPtotal;$sum[$getUserVar[msgXPtotal;$authorID;$guildID];$get[xp]];$authorID;$guildID]
