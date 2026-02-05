@@ -31,11 +31,11 @@ $let[cmdName;$commandName]
 $onlyIf[$hasRoles[1462224054676099094;$authorID;1462547405466636384]==true;<@$authorID> | Você precisa ser **$username[$clientID]** Developer para poder executar esse comando.]
 `
 },{
-	name: "winder unban"
-	aliases: ["winder banir", "wb", "winder exilar"],
-	desc: "Bane automaticamente um usuário permanentemente",
+	name: "winder unban", 
+	aliases: ["winder desbanir", "wub"],
+	desc: "Desbane automaticamente um usuário permanentemente",
 	category: "Moderação",
-	usage: "winder ban userID motivo?",
+	usage: "winder unban userID motivo?",
 	code: `
 $sendMessage[<@$authorID> **$username[$get[userID]]** foi **$get[puniType]**!]
 
