@@ -10,7 +10,7 @@ $sendDm[{newEmbed:
 Seu voto no top.gg ajuda bastante! Obrigado por isso, todos nós agradecemos isto! 
 Você ganhou **$get[xp]** pontos de atividades e neste mês você já votou **$getUserVar[votesMonth;$authorID;$guildID]** vezes!
 }
-{footer:Quer ser lembrado de votar? use w!lembrarvoto}
+{footer:Quer ser lembrado de votar? use $getGuildVar[prefixo]lembrarvoto}
 {color:Green}
 };$authorID]
 
@@ -26,15 +26,14 @@ O **Bônus de Pontos de Atividade** foi ativado e ganhou **$get[xp] PDA**!
 {actionRow:
 {button:Vote na Patinhas! (Discords.com):link:https://discords.com/servers/$guildID/upvote:false:}
 }
-{deleteIn:5m}
 ]
 
-$setUserVar[votesMonth;$sum[$getUserVar[votesMonth;$authorID];1];$authorID]
+$setUserVar[votesMonth;$sum[$getUserVar[votesMonth;$authorID;$guildID];1];$authorID;$guildID]
 
-$setUserVar[votesTotal;$sum[$getUserVar[votesTotal;$authorID];1];$authorID]
+$setUserVar[votesTotal;$sum[$getUserVar[votesTotal;$authorID;$guildID];1];$authorID]
 
-$setUserVar[msgXP;$sum[$getUserVar[msgXP;$authorID];$get[xp]];$authorID]
-$setUserVar[msgXPtotal;$sum[$getUserVar[msgXPtotal;$authorID];$get[xp]];$authorID]
+$setUserVar[msgXP;$sum[$getUserVar[msgXP;$authorID;$guildID];$get[xp]];$authorID;$guildID]
+$setUserVar[msgXPtotal;$sum[$getUserVar[msgXPtotal;$authorID;$guildID];$get[xp]];$authorID;$guildID]
 
 
 $let[xp;$random[1;5]]
