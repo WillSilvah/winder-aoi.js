@@ -40,7 +40,7 @@ const { LoadCommands } = require("aoi.js");
 require("./handler/variables.js")(client);
 require("./handler/status.js")(client);
 
-client.loadCommands("./comandos/", false);
+client.loadCommands("./comandos/", true);
 
 client.functionManager.createFunction({
     name: "$updateVersion",
