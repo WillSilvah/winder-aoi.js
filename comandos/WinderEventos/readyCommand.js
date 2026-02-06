@@ -17,8 +17,6 @@ $log[---------------
 $username[$clientID] está ligado! >w<
 ---------------
 ]
-
-$updateVersion
 $setStatus[$username[$clientID] está ligado! >w<;custom;online]
 $setUserNickname[$clientID;;]
 `
