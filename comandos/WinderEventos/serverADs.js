@@ -6,7 +6,7 @@ channel: "$getGuildVar[batePapo]",
 executeOnStartup: false,
 every: 2040000,
 code: `
-$ifAwaited[$getGuildVar[msgs;1462224054676099094]>=2;
+$ifAwaited[$getGuildVar[msgPerMinute;1462224054676099094]>=2;
 {execute:ad-$random[1;4]}]
 
 `
