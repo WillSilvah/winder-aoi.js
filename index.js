@@ -21,6 +21,7 @@ const client = new AoiClient({
     db: require("aoi.db"),
     dbType: "KeyValue",
     tables: ["main"],
+    debug: "true",
     securityKey: "a-32-characters-long-string-here",
     },
     autoUpdates: false,
