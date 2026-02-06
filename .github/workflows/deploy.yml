@@ -24,6 +24,7 @@ jobs:
           git fetch origin main
           git reset --hard origin/main
           npm install
+          pm2 restart winder-bot
 
       # DEPLOY PARA O WINDER CANARY (Roda se houver PUSH ou pelo AGENDAMENTO das 06:30)
       - name: Deploy Canary
