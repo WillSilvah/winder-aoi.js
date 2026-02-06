@@ -12,6 +12,14 @@ $onlyIf[$checkContains[$channelID;1066689771109363732;1066689827250110555]==fals
 name: "ofensive-banir",
 type: "awaited",
 code: `
+$writeFile[Recursos/autoBanimentos/$get[userID].json;
+{
+    "username": "$username[$get[userID]]",
+    "motivo": "$get[reason]",
+    "userID": "$get[userID]",
+    "guildID: "$guildID"
+};utf8]
+
 $sendMessage[<@$clientID> **$username[$get[userID]]** foi **$get[puniType]**!]
 
 $ifAwaited[1==1;{execute:punishment-log}]
