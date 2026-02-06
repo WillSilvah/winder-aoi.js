@@ -48,7 +48,7 @@ Boa sorte!
 $thumbnail[1;https://cdn.discordapp.com/attachments/785632865709981756/1184585380113162370/IMG_20231213_165903.png?ex=658c821b&is=657a0d1b&hm=a4b889c321521cf605b9bee6d666b726ca6c471208ec052aa345f86f995d0564&]
 $footer[1;Não estou querendo me gabar, mas a Equipe Pinwheel é a melhor.]
 $color[1;$dyColor[orange;light]]
-$addButton[1;Ir para $channelName[1161096564245282816];link;https://discord.com/channels/$guildID/1161096564245282816;false;🛡️]
+$addButton[1;Ir para $channelName[1466894271457136821];link;https://discord.com/channels/$guildID/1466894271457136821;false;🛡️]
 `
 },{
 name: "ad-4",
