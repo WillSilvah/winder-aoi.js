@@ -7,8 +7,7 @@ on:
       - canary
       - controller
   schedule:
-    # Rodar todos os dias às 06:30 UTC (Aprox. 03:30 da manhã em Pernambuco)
-    - cron: '30 6 * * *'
+    - cron: '30 9 * * *'
 
 jobs:
   deploy:
@@ -17,17 +16,16 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v4
 
-      # DEPLOY PARA WINDER STABLE
+      # DEPLOY PARA WINDER STABLE (Só roda se houver PUSH na branch main)
       - name: Deploy Main
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: |
           cd /home/frufru/services/winder
           git fetch origin main
           git reset --hard origin/main
           npm install
-          pm2 restart winder-bot
 
-      # DEPLOY PARA O WINDER CANARY
+      # DEPLOY PARA O WINDER CANARY (Roda se houver PUSH ou pelo AGENDAMENTO das 06:30)
       - name: Deploy Canary
         if: github.ref == 'refs/heads/canary' || github.event_name == 'schedule'
         run: |
@@ -38,12 +36,12 @@ jobs:
           npm install
           pm2 restart winder-canary
 
-      # DEPLOY PARA O WINDER CONTROLLER
+      # DEPLOY PARA O WINDER CONTROLLER (Só roda se houver PUSH na branch controller)
       - name: Deploy Controller
-        if: github.ref == 'refs/heads/controller'
+        if: github.ref == 'refs/heads/controller' && github.event_name == 'push'
         run: |
           cd /home/frufru/services/winder-controller
           git fetch origin controller
           git reset --hard origin/controller
           npm install
-          pm2 restart winder-controller || pm2 start index.js --name winder-controller
+          pm2 restart winder-controller

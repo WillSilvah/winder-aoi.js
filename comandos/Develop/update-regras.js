@@ -1,6 +1,7 @@
 module.exports = [{
 name: "update-regras",
 code: `
+$attachment[https://i.ibb.co/d4L5XKFQ/winder-regras-banner.png;winder_regras_banner.png]
 $author[1;Patinhas: Nossa toca, sua casa;https://cdn.discordapp.com/emojis/1464435933729263657.png?size=2048]
 $description[1;
 $addField[1;Termos de Serviço e Diretrizes;- Além das regras direcionadas a Patinhas, você deve também seguir os [Termos de Serviços](https://discord.com/terms 'Termos de Serviços') e [Diretrizes](https://discord.com/guidelines 'Diretrizes') do Discord.]
