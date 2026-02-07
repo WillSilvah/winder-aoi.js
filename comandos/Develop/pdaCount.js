@@ -25,7 +25,7 @@ $let[bonusBoosterPDA;$if[$hasRoles[$guildID;$authorID;$getVar[memberBoosterRole]
 
 $let[bonusVotePDA;$if[$hasRoles[$guildID;$authorID;$getVar[memberVotedRole]]==true;4;0]]
 
-$let[basicPDA;$if[$get[textDivisorPDA]>=15;15;$get[textDivisorPDA]]]
+$let[basicPDA;$if[$get[textDivisorPDA]>=30;30;$get[textDivisorPDA]]]
 
 $let[textDivisorPDA;$truncate[$math[$charCount[$message]/4]]]
 

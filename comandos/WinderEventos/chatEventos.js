@@ -4,7 +4,7 @@ name: "loopEvent",
 type: "loop",
 channel: "$getGuildVar[batePapo]",
 executeOnStartup: false,
-every: 1800000,
+every:  900000,
 code: `
 $setUserVar[pickCount;$sum[$getUserVar[pickCount;$clientID;$guildID];1];$clientID;$guildID]
 
