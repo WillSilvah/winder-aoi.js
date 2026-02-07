@@ -3,7 +3,7 @@ name: "autoRankDaily",
 type: "loop",
 channel: "$getVar[consoleChat]",
 executeOnStartup: "false",
-every: 10800000 ,
+every: 36000000,
 code: `
 
 $channelSendMessage[$getGuildVar[rankedChat];{newEmbed:

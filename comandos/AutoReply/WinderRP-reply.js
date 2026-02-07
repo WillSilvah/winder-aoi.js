@@ -20,15 +20,31 @@ $ifAwaited[$checkContains[*$toLowerCase[$message]*;boop]==true;
 {execute:rp-reply-boop}
 ]
 
+$ifAwaited[$checkContains[$toLowercase[$message;hytale]|$checkContains[$toLowercase[$message;ou]|$checkContains[$toLowercase[$message;minecraft]==true|true|true;
+{execute:rp-reply-hytaleouminecraft}
+
 
 $onlyIf[$mentioned[1]==$clientID;]
 $onlyIf[$checkContains[$channelID;1066689771109363732;1066689827250110555]==false;]
 `
 },{
+	name: "rp-reply-hytaleouminecraft",
+	type: "awaited",
+	code: `
+$sendMessage[$randomText[É claro que é Minecraft;Hytale? ;w; *arrepia os pelos* é lógico que é Minecraft! $customEmoji[pats_foxThumbsUp]]]
+
+$reply
+$wait[2s]
+$clientTyping
+$cooldown[1m;]	
+	
+	
+`
+},{
 name: "rp-reply-boop",
 type: "awaited",
 code: `
-*boop*! >w<
+$sendMessage[*boop*! >w<]
 
 $reply
 $wait[2s]
@@ -41,7 +57,6 @@ type: "awaited",
 code: `
 $randomText[*Abraço você* >w<;*Abraço de volta* >w<;*Abraça e ronrona* UwU]
 
-$reply
 $wait[2s]
 $clientTyping
 $cooldown[1m;]
@@ -50,9 +65,8 @@ $cooldown[1m;]
 name: "rp-reply-meow",
 type: "awaited",
 code: `
-$randomText[Miau;Meow;Meeooww;Meeow;Meoow;Meoww;Miiau;Miaau;Miauu]! OwO
+$sendMessage$randomText[Miau;Meow;Meeooww;Meeow;Meoow;Meoww;Miiau;Miaau;Miauu]! OwO]
 
-$reply
 $wait[2s]
 $clientTyping
 $cooldown[1m;]
@@ -61,9 +75,8 @@ $cooldown[1m;]
 name: "rp-reply-ronrona",
 type: "awaited",
 code: `
-Que fofinho! :3
+$sendMessage[Que fofinho! :3]
 
-$reply
 $wait[2s]
 $clientTyping
 $cooldown[1m;]
@@ -72,7 +85,7 @@ $cooldown[1m;]
 name: "rp-reply-pat",
 type: "awaited",
 code: `
-$randomText[*Ronrona* -w-;*Pula em seu colo* uwu]
+$sendMessage[$randomText[*Ronrona* -w-;*Pula em seu colo* uwu]]
 
 $reply
 $wait[2s]
@@ -83,9 +96,8 @@ $cooldown[1m;]
 name: "rp-reply-morde",
 type: "awaited",
 code: `
-$randomText[*Fica com raiva* >:(;*Morde de volta* :3;*Corre* :(]
+$sendMessage[$randomText[*Fica com raiva* >:(;*Morde de volta* :3;*Corre* :(]]
 
-$reply
 $wait[2s]
 $clientTyping
 $cooldown[1m;]
