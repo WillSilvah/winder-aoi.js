@@ -46,8 +46,7 @@ client.loadCommands("./comandos/", true);
 client.functionManager.createFunction({
     name: "$updateVersion",
     type: "aoi.js",
-    code: `$writeFile[Recursos/version.json;$username[$clientID] $date.$formatDate[$dateStamp;MM];utf8]
-$timezone[America/Recife]`
+    code: `$writeFile[Recursos/version.json;$username[$clientID] $formatDate[$dateStamp;D.M];utf8]`
 });
 
 client.functionManager.createFunction({
