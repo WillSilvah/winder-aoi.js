@@ -37,8 +37,6 @@ new Database(client, {
   debug: true,
 });
 
-const { LoadCommands } = require("aoi.js");
-
 require("./handler/variables.js")(client);
 require("./handler/status.js")(client);
 
