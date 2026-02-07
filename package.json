@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "aoi.db": "github:aoijs/aoi.db#v2",
-    "aoi.js": "github:aoijs/aoi.js#v6",
+    "aoi.sqlite": "github:faf4a/aoi.sqlite",
+    "aoi.js": "github:aoijs/aoi.js",
     "dotenv": "17.2.3",
     "pm2": "^6.0.14",
     "discord.js": "^14.25.1"
